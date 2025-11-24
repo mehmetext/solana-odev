@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Hardhat
+dapp/artifacts/
+dapp/cache/
+dapp/coverage/
+dapp/coverage.json
+dapp/typechain/
+dapp/typechain-types/
+
+# Client
+client/dist/
+
+# Docker
+ganache_data/
+
+# Local artifacts
+contract-address.json
+
+# System
+.DS_Store
+Thumbs.db
