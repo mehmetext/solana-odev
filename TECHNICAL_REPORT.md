@@ -115,7 +115,27 @@ Sistem Docker üzerinde çalışacak şekilde yapılandırılmıştır.
     docker-compose exec client npx ts-node src/index.ts issue cert123 101 "Ahmet Yilmaz" "Solana Bootcamp" "Patika"
     ```
 
-## 7. Sonuç ve Gelecek Çalışmalar
+## 7. Test Kanıtları
+
+Sistemin fonksiyonel gereksinimleri karşıladığını gösteren test senaryoları ve sonuçları aşağıdadır.
+
+### 7.1. Fonksiyonel Testler
+
+| Test Senaryosu | Beklenen Sonuç | Gerçekleşen Sonuç | Durum |
+| :--- | :--- | :--- | :--- |
+| **Sertifika Oluşturma** | Yeni sertifika ID ve Hash ile zincire kaydedilmeli. | `Certificate issued successfully!` mesajı alındı. | ✅ Başarılı |
+| **Sertifika Doğrulama** | Geçerli ID ve Salt ile sorgulandığında `VALID` dönmeli. | `✅ Certificate is VALID` çıktısı alındı. | ✅ Başarılı |
+| **Hatalı Doğrulama** | Yanlış Salt veya İsim ile sorgulandığında `INVALID` dönmeli. | `❌ Certificate is INVALID` çıktısı alındı. | ✅ Başarılı |
+| **Sertifika İptali** | Revoke işlemi sonrası sertifika geçersiz olmalı. | `Certificate has been REVOKED` uyarısı alındı. | ✅ Başarılı |
+
+### 7.2. Kanıtlar
+
+Uygulamanın çalışmasını gösteren ekran kaydı proje dizininde mevcuttur.
+*   **Video Dosyası:** [Ekran Kaydı](./Ekran%20Kaydı%202025-11-30%2018.58.04.mov)
+
+---
+
+## 8. Sonuç ve Gelecek Çalışmalar
 
 Bu sistem, merkeziyetsiz güven mimarisi üzerine kurulmuş, ölçeklenebilir ve gizlilik odaklı bir çözümdür.
 
